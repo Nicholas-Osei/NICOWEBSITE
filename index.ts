@@ -19,11 +19,11 @@ import{
     try{
       const method=event.httpMethod;
       const path = event.path;
-      if(path === '/lol')
+      if(path === '/bestanden')
       {
         if(method ==='GET')
         {
-          body={files:[{name:'fake.jpeg'}]};
+          body={files:[{name:'bestand'}]};
         }else if(method === 'DELETE'){
           body={};
         }else if (method === 'POST')
