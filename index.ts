@@ -58,16 +58,18 @@ return{};
     try{
       const method=event.httpMethod;
       const path = event.path;
+      const req = JSON.parse(event.body)
       if(path === '/bestanden')
       {
         if(method ==='GET')
         {
-          body={files:[{name:'bestand'}]};
+        //   body={files:[{name:'bestand'}]};
+            body = await getFiles();
         }else if(method === 'DELETE'){
-          body={};
+          body=await deleteFiles(req.name);
         }else if (method === 'POST')
         {
-          body={};
+          body= await postFiles(req.name,req.contentType,req.content);
         }
       }
       res.body=JSON.stringify(body);
