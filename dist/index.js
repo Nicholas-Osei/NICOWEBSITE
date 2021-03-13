@@ -29,7 +29,7 @@ const handler = (event, context) => __awaiter(void 0, void 0, void 0, function* 
     try {
         const method = event.httpMethod;
         const path = event.path;
-        if (path === '/files') {
+        if (path === '/lol') {
             if (method === 'GET') {
                 body = { files: [{ name: 'fake.jpeg' }] };
             }
