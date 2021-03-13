@@ -19,7 +19,7 @@ import{
     try{
       const method=event.httpMethod;
       const path = event.path;
-      if(path === '/files')
+      if(path === '/lol')
       {
         if(method ==='GET')
         {
