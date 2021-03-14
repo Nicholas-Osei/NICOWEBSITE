@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "aws-sdk": "^2.863.0",
     "lodash": "^4.17.21",
     "typescript": "^4.2.3"
   },
